@@ -25,7 +25,15 @@
                </div>
                </div>
                <div class="inner_block_02_02">
-                   <di
+                   <div class="container-div_02">
+                       Quantity : <input type="number" id="number" name="number">
+                   </div>
+                   <div class="container-div_03">
+                       <button class="btn_01">View Cart</button>
+                   </div>
+                   <div class="container-div_04">
+                       <button class="btn_02">Buy Now</button>
+                   </div>
                </div>
            </div>
        </div>

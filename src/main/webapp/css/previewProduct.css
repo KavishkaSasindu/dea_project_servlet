@@ -14,7 +14,6 @@
    width: 90%;
     height: auto;
     margin-top: 100px;
-    border: 1px solid black;
     align-items: center;
     justify-content: space-between;
 }
@@ -23,7 +22,6 @@
     background-image: url("https://img.freepik.com/free-photo/black-headphones-digital-device_53876-96805.jpg?t=st=1714148508~exp=1714152108~hmac=6b1043a54cc78e8e1b405644a813a16a2cb5faea7f4024e9ace1d90d089ba907&w=740");
     background-size: cover;
     display: inline-block;
-    border: 1px solid red;
     width: 400px;
     height: 400px;
     align-items: center;
@@ -35,14 +33,12 @@
     align-items: center;
     justify-content: center;
     display: inline-block;
-    border: 1px solid blue;
     width: 800px;
     height: 400px;
     float: right;
 }
 
 .inner_block_02_01{
-    border: 1px solid green;
     width: 100%;
     height: 200px;
     align-items: center;
@@ -55,9 +51,87 @@
 .header_01{
     font-family: "Play", sans-serif;
 }
+.pgr_01{
+    font-family: "Play", sans-serif;
+}
 .inner_block_02_02{
-    border: 1px solid brown;
     width: 100%;
     height: 200px;
 
+}
+.container-div_02{
+    width: 100%;
+    height: 100px;
+    align-items: flex-start;
+    justify-content: left;
+    display: flex;
+}
+.container-div_03{
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.container-div_04{
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_01 {
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+
+    :hover {
+        transform: scale(1.04);
+        background-color: #21e065;
+    }
+}
+.btn_02{
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+
+    :hover {
+        transform: scale(1.04);
+        background-color: #21e065;
+    }
 }
