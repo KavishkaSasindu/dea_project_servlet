@@ -9,8 +9,15 @@
 <html>
 <head>
     <title>Preview Product</title>
+    <link rel=""
 </head>
 <body>
+   <div class="outer">
+       <div class="inner">
+           <div class="inner_01">
 
+           </div>
+       </div>
+   </div>
 </body>
 </html>
