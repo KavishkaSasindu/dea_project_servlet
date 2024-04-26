@@ -17,6 +17,15 @@
 </head>
 
 <body>
+
+<%
+    String email = null;
+    if(session!=null && session.getAttribute("email")!=null){
+        email = (String) session.getAttribute("email");
+    }else{
+        response.sendRedirect("signin.jsp");
+    }
+%>
     <div class="container">
         <h1>User Profile</h1>
         <div class="profile-info">
@@ -26,7 +35,7 @@
             <img src="profile-pic.jpg" alt="Profile Picture">
             <p>User Name</p>
             <ul>
-                <li><span>Email:</span> user@example.com</li>
+                <li><span>Email:</span> user@example.com  <%=email%> </li>
                 <li><span>NIC No:</span> 222229999888</li>
                 <li><span>Age:</span> 25</li>
                 <!-- Add more profile information as needed -->
