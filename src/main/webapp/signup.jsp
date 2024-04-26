@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>SignUp</title>
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
 <div>
