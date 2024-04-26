@@ -15,7 +15,7 @@
 <div>
     <div class="main">
         <p class="sign" align="center">Sign up</p>
-        <form class="form1" >
+        <form class="form1"  action="add" method="post">
             <input class="detail" id="fn" type="text" align="center" placeholder="First Name" name="firstname">
             <input class="detail" id="ls" type="text" align="center" placeholder="Last Name" name="lastname">
             <input class="detail" id="email" type="email" align="center" placeholder="Email Address" name="email">
@@ -23,10 +23,10 @@
             <input class="detail" id="age" type="text" align="center" placeholder="Age" name="age">
 
             <input class="pass" type="password" align="center" placeholder="Password" name="password">
-            <input class="pass" type="password" align="center" placeholder="Confirm Password" name="passwrod">
+            <input class="pass" type="password" align="center" placeholder="Confirm Password" name="confirmPassword">
 
-            <a class="submit" align="center">Sign up</a>
-            <p class="forgot" align="center"><a href="#">Already have an account</a></p>
+            <button class="submit" align="center">Sign up</button>
+            <p class="forgot" align="center"><a href="signin.jsp">Already have an account</a></p>
         </form>
     </div>
 </div>
