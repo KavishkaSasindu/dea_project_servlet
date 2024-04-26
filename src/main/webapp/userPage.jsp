@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
 
-    <!-- Link CSS page -->
+    <!-- Link CSS page  -->
     <link rel="stylesheet" href="./css/userPage.css">
 </head>
 
