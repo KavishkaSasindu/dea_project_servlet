@@ -5,6 +5,7 @@ import models.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class UserDao {
 
@@ -36,5 +37,27 @@ public class UserDao {
 
         return insertRow>0;
     }
+
+    public boolean signInUser(String email,String password){
+        try{
+             final String SELECT_QUERY = "SELECT * from user email=? ,password = ? ";
+             PreparedStatement stmt = conn.prepareStatement(SELECT_QUERY);
+             stmt.setString(1,email);
+             stmt.setString(2,password);
+
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return true;
+            }else{
+                System.out.println("user not found in db");
+                return false;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
 
 }
