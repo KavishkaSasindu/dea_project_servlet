@@ -30,7 +30,7 @@
         </div>
         <div class="form-group">
             <label for="productQuantity">Quantity</label>
-            <input type="number" id="productQuantity" name="productQuantity" min="0" step="0.01" required>
+            <input type="number" id="productQuantity" name="productQuantity" placeholder="maximum 1000 products" min="0" step="0.01" required>
         </div>
 
 
