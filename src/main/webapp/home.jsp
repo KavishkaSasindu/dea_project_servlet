@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
 <p>this is home</p>
