@@ -9,7 +9,7 @@ public class DbConnection {
 
         final String DB_USERNAME = "root";
         final String DB_PASSWORD = "mysql";
-        final String DB_URL = "jdbc:mysql://localhost/ecommerce";
+        final String DB_URL = "jdbc:mysql://localhost/dea_project";
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -15,10 +15,10 @@
 <div>
     <div class="main">
         <p class="sign" align="center">Sign in</p>
-        <form class="form1">
-            <input class="username " name="username" type="text" align="center" placeholder="Username">
+        <form class="form1" action="signIn" method="post">
+            <input class="username " name="email" type="email" align="center" placeholder="email">
             <input class="password" name="password" type="password"  align="center" placeholder="Password">
-            <a class="submit" align="center">Sign in</a>
+            <button class="submit" type="submit" align="center">Sign in</button>
 
         </form>
 
