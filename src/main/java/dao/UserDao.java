@@ -40,7 +40,7 @@ public class UserDao {
 
     public boolean signInUser(String email,String password){
         try{
-             final String SELECT_QUERY = "SELECT * from user email=? ,password = ? ";
+             final String SELECT_QUERY = "SELECT * from user WHERE email=? AND password = ? ";
              PreparedStatement stmt = conn.prepareStatement(SELECT_QUERY);
              stmt.setString(1,email);
              stmt.setString(2,password);
