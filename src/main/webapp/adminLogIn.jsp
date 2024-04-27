@@ -18,13 +18,15 @@
         <form class="form" method="post">
 
             <div class="user1">
-                <label for="username">Email</label>
-                <input type="email" placeholder="Enter Your Email" id="username">
+                <input type="email" id="email" required>
+                <span></span>
+                <label for="email">Email</label>
             </div>
 
             <div class="user2">
+                <input type="password"  id="password" required>
+                <span></span>
                 <label for="password">Password</label>
-                <input type="password" placeholder="Enter Your PAssword" id="password">
             </div>
 
             <div class="user3">
