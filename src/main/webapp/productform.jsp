@@ -14,14 +14,14 @@
 <body>
 <div class="container">
     <h2>Add Product</h2>
-    <form id="productForm">
+    <form id="productForm" action="addProduct" method="post">
         <div class="form-group">
             <label for="productName">Product Name</label>
             <input type="text" id="productName" placeholder="The titles should be between 90 to 100 characters." name="productName" required>
         </div>
         <div class="form-group">
             <label for="productPrice">Product Price (Rs.)</label>
-            <input type="number" id="productPrice" name="productPrice" placeholder="1 000.00/=" min="0" step="0.01" required>
+            <input type="text" id="productPrice" name="productPrice" placeholder="1 000.00/=" min="0" step="0.01" required>
         </div>
 
         <div class="form-group">
@@ -35,7 +35,7 @@
 
 
         <div class="form-group">
-            <label for="productImageMain">Product Main Image</label>
+            <label for="productMainImage">Product Main Image</label>
             <input type="text" id="productMainImage" name="productMainImage" placeholder="https://www.google.com/search?q=image" min="0" step="0.01" required>
         </div>
         <div class="form-group">
@@ -51,7 +51,7 @@
             <input type="text" id="productImage3" name="productImage3" placeholder="https://www.google.com/search?q=image" min="0" step="0.01" required>
         </div>
         <div class="form-group">
-            <input type="submit" value="Add Product">
+            <button type="submit">Add Product</button>
         </div>
     </form>
 </div>

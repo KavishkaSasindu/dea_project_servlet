@@ -1,46 +1,58 @@
 package models;
 
-public class Product {
-    private String pname;
-    private float pprice;
-    private String des;
-    private String mimage;
+public class Product{
+    private int id;
+    private String pName;
+    private String pPrice;
+    private String pDescription;
+    private String mainImage;
     private String img1;
     private String img2;
     private String img3;
+    private int quantity;
 
-    public Product(){}
-
-    public String getPname() {
-        return pname;
+    public Product(){
+        System.out.println("Invoke product model");
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public int getId() {
+        return id;
     }
 
-    public float getPprice() {
-        return pprice;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setPprice(float pprice) {
-        this.pprice = pprice;
+    public String getpName() {
+        return pName;
     }
 
-    public String getDes() {
-        return des;
+    public void setpName(String pName) {
+        this.pName = pName;
     }
 
-    public void setDes(String des) {
-        this.des = des;
+    public String getpPrice() {
+        return pPrice;
     }
 
-    public String getMimage() {
-        return mimage;
+    public void setpPrice(String pPrice) {
+        this.pPrice = pPrice;
     }
 
-    public void setMimage(String mimage) {
-        this.mimage = mimage;
+    public String getpDescription() {
+        return pDescription;
+    }
+
+    public void setpDescription(String pDescription) {
+        this.pDescription = pDescription;
+    }
+
+    public String getMainImage() {
+        return mainImage;
+    }
+
+    public void setMainImage(String mainImage) {
+        this.mainImage = mainImage;
     }
 
     public String getImg1() {
@@ -65,5 +77,13 @@ public class Product {
 
     public void setImg3(String img3) {
         this.img3 = img3;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
