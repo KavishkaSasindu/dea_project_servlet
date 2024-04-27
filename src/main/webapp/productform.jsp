@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="./css/productform.css">
 </head>
 <body>
+
+<%
+
+    if(session!=null && session.getAttribute("email")!=null){
+        System.out.println("Product page");
+    }else{
+        response.sendRedirect("signin.jsp");
+    }
+
+%>
 <div class="container">
     <h2>Add Product</h2>
     <form id="productForm" action="addProduct" method="post">
