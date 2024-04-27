@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="models.User" %>
+<%@ page import="dao.UserDao" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 4/27/2024
@@ -29,18 +31,39 @@
             </tr>
             </thead>
             <tbody>
+
+            <%
+                List<User> userList = List.of();
+                try{
+                    UserDao userDao = new UserDao();
+                    userList = userDao.getAllUsers();
+                }catch(Exception e){
+                    e.printStackTrace();
+                    System.out.println(e.getMessage());
+                }
+
+                for(User userData:userList){
+                    System.out.println(userData);
+
+
+            %>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+
+
+                <th scope="row"><%=userData.getId()%></th>
+                <td><%=userData.getFirstName()%></td>
+                <td><%=userData.getLastName()%></td>
+                <td><%=userData.getEmail()%></td>
+                <td><%=userData.getNic()%></td>
+                <td><%=userData.getAge()%></td>
                 <td>
                     <button class="btn btn-primary">Update</button>
                     <button class="btn btn-primary">Delete</button>
                 </td>
+
+
             </tr>
+            <%}%>
             </tbody>
         </table>
     </div>

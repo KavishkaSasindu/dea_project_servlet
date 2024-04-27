@@ -14,7 +14,5 @@
 .outer{
     width: 90%;
     height: 90vh;
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
 }
