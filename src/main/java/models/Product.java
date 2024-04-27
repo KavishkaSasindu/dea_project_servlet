@@ -10,6 +10,7 @@ public class Product{
     private String img2;
     private String img3;
     private int quantity;
+    private User user;
 
     public Product(){
         System.out.println("Invoke product model");
@@ -85,5 +86,13 @@ public class Product{
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
