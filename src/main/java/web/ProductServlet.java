@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import models.Product;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class ProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         try{
             Product product =new Product();
+
             String productName = request.getParameter("productName");
             String productPrice = request.getParameter("productPrice");
             String productDescription = request.getParameter("productDescription");
