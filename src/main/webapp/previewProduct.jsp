@@ -14,7 +14,9 @@
 <body>
    <div class="outer">
        <div class="inner">
-           <div class="inner_block_01"></div>
+           <div class="inner_block_01">
+               <img src="https://assets2.razerzone.com/images/pnx.assets/57c2af30b5d9a2b699b3e896b788e00f/headset-landingpg-500x500-blacksharkv2pro2023.jpg" alt="">
+           </div>
            <div class="inner_block_02">
                <div class="inner_block_02_01">
                <div class="container-div">
@@ -36,7 +38,22 @@
                    </div>
                </div>
            </div>
+
+       </div>
+
+   </div>
+   <div class="inner_02">
+       <div>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8rpaBNYtLYwunDKZ9zwnNAExYy_ZSBcgcmzgz-_wOA&s" alt="">
+       </div>
+       <div>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8rpaBNYtLYwunDKZ9zwnNAExYy_ZSBcgcmzgz-_wOA&s" alt="">
+       </div>
+       <div>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8rpaBNYtLYwunDKZ9zwnNAExYy_ZSBcgcmzgz-_wOA&s" alt="">
        </div>
    </div>
+
+
 </body>
 </html>

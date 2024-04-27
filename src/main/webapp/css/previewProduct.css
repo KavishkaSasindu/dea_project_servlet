@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 .outer{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +20,20 @@
 }
 
 .inner_block_01{
-    background-image: url("https://img.freepik.com/free-photo/black-headphones-digital-device_53876-96805.jpg?t=st=1714148508~exp=1714152108~hmac=6b1043a54cc78e8e1b405644a813a16a2cb5faea7f4024e9ace1d90d089ba907&w=740");
-    background-size: cover;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: inline-block;
     width: 400px;
     height: 400px;
     align-items: center;
     justify-content: center;
 
+}
+
+.inner_block_01>img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .inner_block_02{
@@ -49,10 +56,10 @@
     padding-top: 40px;
 }
 .header_01{
-    font-family: "Play", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .pgr_01{
-    font-family: "Play", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .inner_block_02_02{
     width: 100%;
@@ -134,4 +141,30 @@
         transform: scale(1.04);
         background-color: #21e065;
     }
+}
+
+.inner_02{
+    height: 150px;
+    position: absolute;
+    left: 65px;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+}
+.inner_02>div{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+
+}
+
+.inner_02>div>img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+
 }
