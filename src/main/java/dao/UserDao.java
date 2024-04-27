@@ -6,6 +6,8 @@ import models.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
 
@@ -57,6 +59,39 @@ public class UserDao {
             System.out.println(e.getMessage());
         }
         return false;
+    }
+
+    public List<User> getAllUsers(){
+        List<User> user = new ArrayList<>();
+        try{
+            final String ALL_QUERY = "SELECT * from user";
+            PreparedStatement stmt = conn.prepareStatement(ALL_QUERY);
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt("id");
+                int nic = rs.getInt("nic");
+                String firstname = rs.getString("firstname");
+                String lastname = rs.getString("lastname");
+                String email = rs.getString("email");
+                String age = rs.getString("age");
+
+                User userList = new User();
+
+                userList.setId(id);
+                userList.setNic(nic);
+                userList.setFirstName(firstname);
+                userList.setLastName(lastname);
+                userList.setEmail(email);
+                userList.setAge(age);
+
+                user.add(userList);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return user;
     }
 
 
