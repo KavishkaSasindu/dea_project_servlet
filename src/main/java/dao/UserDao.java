@@ -95,6 +95,36 @@ public class UserDao {
     }
 
 
+    public User getOneUser(int userId){
+        User user=null;
+        try{
+            final String ONE_QUERY = "SELECT * from user WHERE id=?";
+            PreparedStatement stmt = conn.prepareStatement(ONE_QUERY);
+            stmt.setInt(1,userId);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int nic = rs.getInt("nic");
+                String firstName = rs.getString("firstname");
+                String lastName = rs.getString("lastname");
+                String email = rs.getString("email");
+                String age = rs.getString("age");
+
+                 user = new User();
+
+                user.setNic(nic);
+                user.setFirstName(firstName);
+                user.setLastName(lastName);
+                user.setEmail(email);
+                user.setAge(age);
+
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return user;
+    }
+
 
 
 }
