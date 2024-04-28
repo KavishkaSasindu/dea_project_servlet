@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <form id="contact" action="" method="post">
+    <form id="contact" action="addAdmin" method="post">
         <h3>SignUp Here</h3>
         <fieldset>
             <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
