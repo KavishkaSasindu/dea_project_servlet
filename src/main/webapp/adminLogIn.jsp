@@ -9,34 +9,25 @@
 <html>
 <head>
     <title>Admin SignIn</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/AdminLogin.css">
 </head>
 <body>
-<section>
-    <div class="container">
-        <h1>Login</h1>
-        <form class="form" method="post">
+<div class="container">
+    <form id="contact" action="" method="post">
+        <h3>SignUp Here</h3>
+        <fieldset>
+            <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="*************" type="password" name="password" tabindex="3" required>
+        </fieldset>
 
-            <div class="user1">
-                <input type="email" id="email" required>
-                <span></span>
-                <label for="email">Email</label>
-            </div>
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
 
-            <div class="user2">
-                <input type="password"  id="password" required>
-                <span></span>
-                <label for="password">Password</label>
-            </div>
-
-            <div class="user3">
-                <button type="submit">Login</button>
-                <button type="reset">Clear</button>
-            </div>
-        </form>
-
-    </div>
-</section>
+    </form>
+</div>
 </body>
 </html>
 
