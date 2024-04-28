@@ -15,6 +15,8 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .c-item {
             height: 500px;
@@ -83,7 +85,7 @@
 <div class="section-bar"></div>
 
 <%--description Area--%>
-<div class="outer">
+<div class="outer" data-aos="fade-up">
     <div class="inner">
         <div class="inner-1">
             <div class="title-1">
@@ -102,17 +104,17 @@
 <%--card area--%>
 <div class="card-outer">
     <div class="card-inner">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <img src="./assets/pexels-mota-701877.jpg" alt="img-1">
 
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <img src="./assets/pexels-cottonbro-3945667.jpg" alt="img-2">
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <img src="./assets/pexels-alessandro-oliverio-611273-1472443.jpg" alt="img-3">
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <img src="./assets/pexels-ferarcosn-190819.jpg" alt="img-4">
         </div>
     </div>
@@ -121,7 +123,7 @@
 <div class="section-2"></div>
 
 <%--description Area--%>
-<div class="outer">
+<div class="outer" data-aos="fade-up">
     <div class="inner">
         <div class="inner-1">
             <div class="title-1">
@@ -144,5 +146,35 @@
 <%--bar--%>
 <div class="section-bar"></div>
 
+<div class="card-outer">
+    <div class="card-inner">
+        <div class="card" data-aos="fade-up">
+            <img src="https://5.imimg.com/data5/WW/PE/MY-49716967/peony-baby-girl-clothes-500x500.png" alt="img-1">
+            <a href="" class="btn btn-light">All Products</a>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <img src="https://assets.vogue.com/photos/62f6a400d51389085c5d4ba7/3:4/w_748%2Cc_limit/slide_4.jpg" alt="img-2">
+            <a href="" class="btn btn-light">All Products</a>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <img src="https://www.tomjames.com/pics/catalog/2024SP/pics/Tom-James-Spring-2024-Womens-54.jpg" alt="img-3">
+            <a href="" class="btn btn-light">All Products</a>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShNB-hQqlyWb7QGwhjqEZTQQMgUVcfYfxEW4ugZGZEQw&s" alt="img-4">
+            <a href="" class="btn btn-light">All Products</a>
+        </div>
+    </div>
+</div>
+
+<div class="section-2"></div>
+
+<div class="footer">
+    Footer goes here..
+</div>
+
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
