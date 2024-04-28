@@ -23,6 +23,7 @@ public class SignInServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("email",email);
             System.out.println("User logged in success");
+            response.sendRedirect("index.jsp");
         }else{
             System.out.println("User not logged in");
         }

@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .c-item {
-            height: 500px;
+            height: 550px;
         }
 
         .c-img {
@@ -33,6 +33,21 @@
 
 </head>
 <body>
+
+<%--navbar--%>
+<jsp:include page="navbar.jsp"/>
+
+<div class="nav-con"></div>
+
+
+<%--main title--%>
+<div class="title-container">
+    <div class="sub-container">
+        <h2 class="head-2">"Shopify: Crafting Seamless Shopping</h2>
+    </div>
+</div>
+
+
 <%--main slider--%>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">

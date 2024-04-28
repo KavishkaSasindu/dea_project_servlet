@@ -7,13 +7,6 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-    <%
-        Connection conn ;
-        DbConnection dbConnection = new DbConnection();
-        conn = dbConnection.getConnection();
-    %>
-
-    <p>This is my db connection</p>
-    <h3><%= conn%></h3>
+   <jsp:include page="home.jsp"/>
 </body>
 </html>

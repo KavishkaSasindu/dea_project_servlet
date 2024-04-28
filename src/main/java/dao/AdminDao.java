@@ -18,6 +18,8 @@ public class AdminDao {
         try{
             final String ADMIN_QUERY = "SELECT * from admin WHERE email=? AND password=?";
             PreparedStatement stmt = conn.prepareStatement(ADMIN_QUERY);
+            stmt.setString(1,email);
+            stmt.setString(2,password);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 return true;

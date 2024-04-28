@@ -19,7 +19,7 @@
             <input class="username " name="email" type="email" align="center" placeholder="email">
             <input class="password" name="password" type="password"  align="center" placeholder="Password">
             <button class="submit" type="submit" align="center">Sign in</button>
-
+            <p class="forgot" align="center"><a href="signup.jsp">Dont' have an account</a></p>
         </form>
 
     </div>
