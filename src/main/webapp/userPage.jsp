@@ -14,23 +14,51 @@
 
     <!-- Link CSS page  -->
     <link rel="stylesheet" href="./css/userPage.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 </head>
 
-<body>
-    <div class="container">
+<body class="center">
+
+    <!-- First interface -->
+    <!--<div class="container">
         <h1>User Profile</h1>
-        <div class="profile-info">
+        <div class="profile-info"> -->
 
             <!-- user profile information -->
 
-            <img src="profile-pic.jpg" alt="Profile Picture">
+            <!--<img src="profile-pic.jpg" alt="Profile Picture">
             <p>User Name</p>
             <ul>
                 <li><span>Email:</span> user@example.com</li>
                 <li><span>NIC No:</span> 222229999888</li>
                 <li><span>Age:</span> 25</li>
-                <!-- Add more profile information as needed -->
             </ul>
+        </div>
+    </div>  -->
+
+    <!--Second Interface -->
+    <div class="card center">
+        <div class="prof-img">
+            <img src="https://img.freepik.com/free-photo/3d-illustration-cartoon-character-business-suit-glasses_1142-40377.jpg?t=st=1714240158~exp=1714243758~hmac=341956b9b21e2472e51f90ac7d63d892c2e07b8b2919f82d478f6ce180bc9386&w=740" alt="" />
+            <h1>User Profile</h1>
+            <div class="hide">
+                <p>
+                    <ul>
+                        <li><span>Email:</span> user@example.com</li>
+                        <li><span>NIC No:</span> 222229999888</li>
+                        <li><span>Age:</span> 25</li>
+                    </ul>
+                </p>
+                <div class="icons center">
+                    <i class="fab fa-instagram icon"></i>
+                    <i class="fab fa-facebook icon"></i>
+                    <i class="fab fa-github icon"></i>
+                </div>
+                <button class="more">More</button>
+            </div>
         </div>
     </div>
 </body>
