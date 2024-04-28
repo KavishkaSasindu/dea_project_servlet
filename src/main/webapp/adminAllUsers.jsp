@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="./css/table.css">
 </head>
 <body>
+
+
+<%
+    if(session!=null && session.getAttribute("adminEmail")!=null){
+        System.out.println("Admin Logged In");
+    }else{
+        response.sendRedirect("adminLogIn.jsp");
+    }
+
+%>
 <div class="inner">
     <div class="outer">
         <table class="table">
