@@ -27,7 +27,11 @@
           <li><a href="index.jsp">Home</a></li>
           <li><a href="">Product</a></li>
           <li><a href="">Admin Area</a></li>
-          <li><a href="">Logout</a></li>
+          <li>
+            <form action="logOut" method="post">
+              <button class="btn btn-dark" type="submit" style="font-size: 25px; background-color: black; border: none">Logout</button>
+            </form>
+          </li>
         </ul>
       </div>
     </div>

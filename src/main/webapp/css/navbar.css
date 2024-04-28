@@ -26,12 +26,15 @@
 
 .list>ul{
     list-style: none;
+    align-items: center;
+    text-align: center;
     display: flex;
 }
 
 .list>ul>li{
     margin-left: 30px;
     font-size: 25px;
+
 }
 
 .list>ul>li>a{
@@ -39,4 +42,9 @@
     color: white;
 
 }
+
+.button-1{
+    background-color: black;
+}
+
 
