@@ -20,14 +20,14 @@
   <div class="nav-container">
     <div class="list-items">
       <div class="logo">
-        <h2>Logo</h2>
+        <h1>Logo</h1>
       </div>
       <div class="list">
         <ul>
-          <li><a href="">Home</a></li>
+          <li><a href="index.jsp">Home</a></li>
           <li><a href="">Product</a></li>
           <li><a href="">Admin Area</a></li>
-          <li><a href="">LogOut</a></li>
+          <li><a href="">Logout</a></li>
         </ul>
       </div>
     </div>
@@ -45,7 +45,7 @@
           <li><a href="">Home</a></li>
           <li><a href="">Product</a></li>
           <li><a href="">Admin Area</a></li>
-          <li><a href="">SignIn</a></li>
+          <li><a href="signin.jsp">SignIn</a></li>
         </ul>
       </div>
     </div>
