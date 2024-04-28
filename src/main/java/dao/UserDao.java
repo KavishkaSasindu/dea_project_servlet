@@ -125,6 +125,25 @@ public class UserDao {
         return user;
     }
 
+    public boolean updateUser(User user){
+        int insertRow =0;
+        try{
+            final String UPDATE_QUERY = "UPDATE user SET firstname=? ,lastname=?,email=?,age=?,nic=?";
+            PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);
+            stmt.setString(1,user.getFirstName());
+            stmt.setString(2, user.getLastName());
+            stmt.setString(3,user.getEmail());
+            stmt.setString(4,user.getAge());
+            stmt.setInt(5,user.getNic());
+
+            insertRow = stmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return insertRow>0;
+    }
 
 
 }

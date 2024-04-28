@@ -29,34 +29,34 @@ int userId = Integer.parseInt(request.getParameter("userId"));
 <div class="update-outer">
     <div class="update-inner">
         <div class="form-inner">
-            <form>
+            <form action="update" method="post">
                 <h2 class="heading-para">Update Page</h2>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">First Name :</label>
-                    <input type="email" class="form-control" id="exampleInputFirstName" aria-describedby="emailHelp" value="<%=user.getFirstName()%>">
+                    <input type="text" class="form-control" id="exampleInputFirstName" aria-describedby="emailHelp" value="<%=user.getFirstName()%>" name="firstname">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Last Name :</label>
-                    <input type="email" class="form-control" id="exampleInputLastName" aria-describedby="emailHelp" value="<%=user.getLastName()%>">
+                    <input type="text" class="form-control" id="exampleInputLastName" aria-describedby="emailHelp" value="<%=user.getLastName()%>" name="lastname">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=user.getEmail()%>">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=user.getEmail()%>" name="email">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">NIC :</label>
-                    <input type="email" class="form-control" id="exampleInputNIC" aria-describedby="emailHelp" value="<%=user.getNic()%>">
+                    <input type="text" class="form-control" id="exampleInputNIC" aria-describedby="emailHelp" value="<%=user.getNic()%>" name="nic">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Age :</label>
-                    <input type="email" class="form-control" id="exampleInputAge" aria-describedby="emailHelp" value="<%=user.getAge()%>">
+                    <input type="text" class="form-control" id="exampleInputAge" aria-describedby="emailHelp" value="<%=user.getAge()%>" name="age">
                 </div>
 
 
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-dark">Update User </button>
             </form>
         </div>
     </div>
