@@ -16,6 +16,7 @@
             <img class="search-icon"
                  src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png" alt="Search Icon">
             <input type="text" name="search" placeholder="Search here">
+            <input type="button" name="button" value="search">
         </div>
     </div>
 </div>

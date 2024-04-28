@@ -33,6 +33,10 @@ body {
     align-items: center;
     margin-left: 50px;
 }
+input[type="button"]{
+    margin-left: 10px;
+    font-family:sans-serif;
+}
 
 input[type="text"] {
     width: 200px;
