@@ -23,7 +23,7 @@
         </fieldset>
 
         <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" style="background-color: black">Submit</button>
         </fieldset>
 
     </form>
