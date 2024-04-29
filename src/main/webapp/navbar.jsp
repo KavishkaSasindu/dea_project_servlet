@@ -26,7 +26,8 @@
         <ul>
           <li><a href="index.jsp">Home</a></li>
           <li><a href="allProduct.jsp">Product</a></li>
-          <li><a href="">Admin Area</a></li>
+          <li><a href="adminLogIn.jsp">Admin Area</a></li>
+          <li><a href="adminLogIn.jsp">Profile</a></li>
           <li>
             <form action="logOut" method="post">
               <button class="btn btn-dark" type="submit" style="font-size: 25px; background-color: black; border: none">Logout</button>
@@ -46,9 +47,10 @@
       </div>
       <div class="list">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">Admin Area</a></li>
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="allProduct.jsp">Product</a></li>
+          <li><a href="adminDashboard.jsp">Admin Area</a></li>
+          <li><a href="adminDashboard.jsp">Profile</a></li>
           <li><a href="signin.jsp">SignIn</a></li>
         </ul>
       </div>
