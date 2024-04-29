@@ -25,7 +25,7 @@
       <div class="list">
         <ul>
           <li><a href="index.jsp">Home</a></li>
-          <li><a href="">Product</a></li>
+          <li><a href="allProduct.jsp">Product</a></li>
           <li><a href="">Admin Area</a></li>
           <li>
             <form action="logOut" method="post">
