@@ -18,7 +18,7 @@
            <div class="socialIcons">
                <a href=""><i class="fa-brands fa-facebook"></i></a>
                <a href=""><i class="fa-brands fa-instagram"></i></a>
-               <a href=""><i class="fa-brands fa-github"></i></a>
+               <a href="https://github.com/KavishkaSasindu/dea_project_servlet"><i class="fa-brands fa-github"></i></a>
                <a href=""><i class="fa-brands fa-linkedin"></i></a>
                <a href=""><i class="fa-brands fa-twitter"></i></a>
            </div>
@@ -34,7 +34,7 @@
 
        </div>
        <div class="footerBottom">
-           <p>Copyright &copy;2024; Designed by <span class="designer">Grup</span> </p>
+           <p>Copyright &copy;2024; Designed by <span class="designer">Computing Students</span> </p>
        </div>
    </footer>
 </body>
