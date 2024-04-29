@@ -1,4 +1,5 @@
-<%--
+<%@ page import="models.User" %>
+<%@ page import="dao.UserDao" %><%--
   Created by IntelliJ IDEA.
   User: PEMIDU HERATH
   Date: 4/27/2024
@@ -14,36 +15,27 @@
     <link rel="stylesheet" href="./css/updatePage.css">
 </head>
 <body>
-<div class="inner">
-    <div class="outer">
-        <div class="form-div">
-            <h1 class="head-1">Update User Here</h1>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputFirstName">First Name</label>
-                    <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Fist Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputLastName">Last Name</label>
-                    <input type="text" class="form-control" id="exampleInputLastName" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputAge">Age</label>
-                    <input type="text" class="form-control" id="exampleInputAge" placeholder="Age">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputNic">NIC number</label>
-                    <input type="text" class="form-control" id="exampleInputNic" placeholder="NIC">
-                </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
+<h1>User Profile</h1>
+<%
+    // Retrieve user email from session
+    String userEmail = (String) session.getAttribute("email");
+    System.out.println(userEmail);
+
+    // Create instance of UserDao
+    UserDao userDao = new UserDao();
+
+    // Call getUserByEmail method to fetch user data
+    User user = userDao.getUserBySession(userEmail);
+
+    // Display user data
+    if (user != null) {
+%>
+<p>Email: <%= user.getEmail() %></p>
+<p>First Name: <%= user.getFirstName() %></p>
+<p>Last Name: <%= user.getLastName() %></p>
+<% } else { %>
+<h1>No User found</h1>
+<%}%>
 </body>
 </html>
