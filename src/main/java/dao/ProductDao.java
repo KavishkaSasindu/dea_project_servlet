@@ -120,4 +120,44 @@ public class ProductDao{
         }
         return product;
     }
+
+    public Product getOneProduct(int id){
+        Product product=null;
+        try{
+            final String ONE_PRODUCT = "SELECT * FROM product WHERE id=?";
+            PreparedStatement stmt = conn.prepareStatement(ONE_PRODUCT);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                product = new Product();
+                int pId = rs.getInt("id");
+                String pName = rs.getString("pname");
+                String pPrice = rs.getString("pprice");
+                String description = rs.getString("description");
+                String image1 = rs.getString("image1");
+                String image2 = rs.getString("image2");
+                String image3 = rs.getString("image3");
+                String image4 = rs.getString("image4");
+                int quantity = rs.getInt("quantity");
+
+                product.setId(id);
+                product.setpName(pName);
+                product.setpPrice(pPrice);
+                product.setpDescription(description);
+                product.setMainImage(image1);
+                product.setImg1(image2);
+                product.setImg2(image3);
+                product.setImg3(image4);
+                product.setQuantity(quantity);
+
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return product;
+    }
 }

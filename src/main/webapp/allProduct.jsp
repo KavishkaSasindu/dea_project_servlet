@@ -103,7 +103,10 @@
                 <div class="product-price"><%=product.getpPrice()%> LKR</div>
             </div>
             <div class="card-button">
-                <button href="#" class="purchase-button">Purchase</button>
+                <form action="previewProduct.jsp" method="post">
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Purchase</button>
+                </form>
                 <button class="purchase-button">Cart</button>
             </div>
         </div>
