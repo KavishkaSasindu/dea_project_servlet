@@ -149,5 +149,19 @@ public class UserDao {
         return insertRow>0;
     }
 
+    public boolean deleteContact(int userId){
+        int rowsDeleted = 0;
+        try{
+           final String DELETE_QUERY = "DELETE FROM user WHERE id=?";
+           PreparedStatement stmt = conn.prepareStatement(DELETE_QUERY);
+           stmt.setInt(1,userId);
+           rowsDeleted = stmt.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return rowsDeleted>0;
+    }
+
 
 }

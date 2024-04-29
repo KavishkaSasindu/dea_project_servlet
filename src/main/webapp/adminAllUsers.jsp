@@ -86,11 +86,16 @@
                 <td style="display: flex">
                     <form action="updateUserPage.jsp" method="post">
                         <input type="hidden" name="userId" value="<%=userData.getId()%>">
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        <button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"
                                 data-whatever="@mdo">Update
                         </button>
                     </form>
-                    <button class="btn btn-primary" style="margin-left: 10px">Delete</button>
+                    <form action="delete" method="post" style="margin-left: 10px">
+                        <input type="hidden" name="id" value="<%=userData.getId()%>">
+                        <button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"
+                                data-whatever="@mdo">Delete
+                        </button>
+                    </form>
                 </td>
 
 
