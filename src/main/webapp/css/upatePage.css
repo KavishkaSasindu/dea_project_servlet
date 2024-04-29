@@ -1,0 +1,24 @@
+.update-outer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-inner{
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.heading-para{
+    text-align: center;
+}

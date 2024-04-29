@@ -43,6 +43,7 @@ public class UserServlet extends HttpServlet {
 
         if(successUser){
             System.out.println("User added Success");
+            response.sendRedirect("signin.jsp");
         }else{
             System.out.println("User not added");
         }
