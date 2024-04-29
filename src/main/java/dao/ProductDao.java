@@ -80,4 +80,44 @@ public class ProductDao{
         }
         return product;
     }
+
+    public List<Product> getAllProduct(){
+        List<Product> product = new ArrayList<>();
+        try{
+            final String ALL_QUERY = "SELECT * FROM product";
+            PreparedStatement stmt = conn.prepareStatement(ALL_QUERY);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String pName = rs.getString("pname");
+                String pPrice = rs.getString("pprice");
+                String description = rs.getString("description");
+                String image1 = rs.getString("image1");
+                String image_2 = rs.getString("image2");
+                String image_3 = rs.getString("image3");
+                String image_4 = rs.getString("image4");
+                int quantity = rs.getInt("quantity");
+
+                Product product1 = new Product();
+
+                product1.setId(id);
+                product1.setpName(pName);
+                product1.setMainImage(image1);
+                product1.setImg1(image_2);
+                product1.setImg2(image_3);
+                product1.setImg3(image_4);
+                product1.setpDescription(description);
+                product1.setpPrice(pPrice);
+                product1.setQuantity(quantity);
+
+                product.add(product1);
+
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return product;
+    }
 }
