@@ -1,6 +1,7 @@
 package dao;
 
 import db.DbConnection;
+import jakarta.servlet.http.HttpSession;
 import models.User;
 
 import java.sql.Connection;
@@ -161,6 +162,32 @@ public class UserDao {
             System.out.println(e.getMessage());
         }
         return rowsDeleted>0;
+    }
+
+    public User getUserBySession(String email){
+        User user= null;
+        try{
+            final String SESSION_QUERY = "SELECT * FROM user WHERE email=?";
+            PreparedStatement stmt = conn.prepareStatement(SESSION_QUERY);
+            stmt.setString(1,email);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setNic(rs.getInt("nic"));
+                user.setFirstName(rs.getString("firstname"));
+                user.setLastName(rs.getString("lastname"));
+                user.setEmail(rs.getString("email"));
+                user.setAge(rs.getString("age"));
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return user;
     }
 
 
