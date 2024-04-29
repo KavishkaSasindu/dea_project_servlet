@@ -26,6 +26,12 @@ int userId = Integer.parseInt(request.getParameter("userId"));
     user = userDao.getOneUser(userId);
     System.out.println(userId);
 
+    if(session!=null && session.getAttribute("adminEmail")!=null){
+        System.out.println("admin sign in");
+    }else{
+        response.sendRedirect("adminLogIn.jsp");
+    }
+
 %>
 <div class="update-outer">
     <div class="update-inner">

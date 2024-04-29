@@ -13,7 +13,7 @@ public class Product{
     private User user;
 
     public Product(){
-        System.out.println("Invoke product model");
+
     }
 
     public int getId() {
