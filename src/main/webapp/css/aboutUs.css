@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "arial", sans-serif;
+}
+.hero{
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.heading h1{
+    color: black;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.hero-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+}
+.hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.hero-content p{
+    font-size: 15px;
+    line-height: 1.5rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+.hero-content button{
+    display: inline-block;
+    background-color: #31363F;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease ;
+}
+.hero-content button:hover{
+    background-color: #6b768b;
+    transform: scale(1.1);
+}
+.hero-image{
+    flex: 1;
+    width: 600px;
+    margin: auto;
+}
+img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/card/
+
+.cards{
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.card-group {
+
+    gap: 25px;
+
+}
+
+.card {
+
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    margin: 9px;
+    width: 18%;
+    height: 350px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.card .layer {
+    background: linear-gradient(to top, rgb(219, 219, 219), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .info {
+    position: absolute;
+    bottom: -35%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+}
+
+.info p {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.info button {
+    background-color: #F0EBE3;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.card:hover,
+.card:hover img,
+.card:hover .layer {
+    transform: scale(1.05);
+}
+
+.card:hover > .layer {
+    opacity: 1;
+}
+
+.card:hover > .info {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card-group:hover > .card:not(:hover) {
+    filter:blur(2px);
+}
