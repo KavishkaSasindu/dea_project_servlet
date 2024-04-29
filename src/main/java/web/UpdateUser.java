@@ -10,6 +10,7 @@ import models.User;
 public class UpdateUser extends HttpServlet{
     public void doPost(HttpServletRequest request,HttpServletResponse response){
         try{
+            int id = Integer.parseInt(request.getParameter("userId"));
             String firstname = request.getParameter("firstname");
             String lastname = request.getParameter("lastname");
             String email= request.getParameter("email");
@@ -17,6 +18,7 @@ public class UpdateUser extends HttpServlet{
             int nic = Integer.parseInt(request.getParameter("nic"));
 
             User user = new User();
+            user.setId(id);
             user.setFirstName(firstname);
             user.setLastName(lastname);
             user.setEmail(email);

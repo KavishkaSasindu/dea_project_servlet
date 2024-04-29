@@ -103,6 +103,7 @@ public class UserDao {
             stmt.setInt(1,userId);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
+                int id = rs.getInt("id");
                 int nic = rs.getInt("nic");
                 String firstName = rs.getString("firstname");
                 String lastName = rs.getString("lastname");
@@ -111,6 +112,7 @@ public class UserDao {
 
                  user = new User();
 
+                 user.setId(id);
                 user.setNic(nic);
                 user.setFirstName(firstName);
                 user.setLastName(lastName);
@@ -128,13 +130,15 @@ public class UserDao {
     public boolean updateUser(User user){
         int insertRow =0;
         try{
-            final String UPDATE_QUERY = "UPDATE user SET firstname=? ,lastname=?,email=?,age=?,nic=?";
+            final String UPDATE_QUERY = "UPDATE user SET firstname=? ,lastname=?,email=?,age=?,nic=? WHERE id=?";
             PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);
+
             stmt.setString(1,user.getFirstName());
             stmt.setString(2, user.getLastName());
             stmt.setString(3,user.getEmail());
             stmt.setString(4,user.getAge());
             stmt.setInt(5,user.getNic());
+            stmt.setInt(6,user.getId());
 
             insertRow = stmt.executeUpdate();
         }catch (Exception e){

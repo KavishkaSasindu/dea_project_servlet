@@ -24,6 +24,7 @@ int userId = Integer.parseInt(request.getParameter("userId"));
 
     UserDao userDao = new UserDao();
     user = userDao.getOneUser(userId);
+    System.out.println(userId);
 
 %>
 <div class="update-outer">
@@ -31,6 +32,10 @@ int userId = Integer.parseInt(request.getParameter("userId"));
         <div class="form-inner">
             <form action="update" method="post">
                 <h2 class="heading-para">Update Page</h2>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Id :</label>
+                    <input type="text" class="form-control" id="exampleInputId" aria-describedby="emailHelp" value="<%=user.getId()%>" name="userId">
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">First Name :</label>
                     <input type="text" class="form-control" id="exampleInputFirstName" aria-describedby="emailHelp" value="<%=user.getFirstName()%>" name="firstname">
