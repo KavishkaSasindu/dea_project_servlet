@@ -92,7 +92,10 @@
                     <input type="hidden" name="productId" value="<%=product.getId()%>">
                     <button class="purchase-button" type="submit">Purchase</button>
                 </form>
-                <button class="purchase-button" style="margin-left: 10px">Cart</button>
+                <form action="cartAdd" method="post" style="margin-left: 10px" >
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Cart</button>
+                </form>
             </div>
         </div>
 
@@ -141,9 +144,15 @@
                 </div>
                 <div class="product-price"><%=product.getpPrice()%> LKR</div>
             </div>
-            <div class="card-button">
-                <button href="#" class="purchase-button">Purchase</button>
-                <button class="purchase-button">Cart</button>
+            <div class="card-button" style="display: flex">
+                <form action="previewProduct.jsp" method="post"  >
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Purchase</button>
+                </form>
+                <form action="cartAdd" method="post" style="margin-left: 10px" >
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Cart</button>
+                </form>
             </div>
         </div>
 
@@ -192,9 +201,15 @@
                 </div>
                 <div class="product-price"><%=product.getpPrice()%> LKR</div>
             </div>
-            <div class="card-button">
-                <button href="#" class="purchase-button">Purchase</button>
-                <button class="purchase-button">Cart</button>
+            <div class="card-button" style="display: flex">
+                <form action="previewProduct.jsp" method="post"  >
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Purchase</button>
+                </form>
+                <form action="cartAdd" method="post" style="margin-left: 10px" >
+                    <input type="hidden" name="productId" value="<%=product.getId()%>">
+                    <button class="purchase-button" type="submit">Cart</button>
+                </form>
             </div>
         </div>
 

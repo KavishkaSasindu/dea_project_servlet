@@ -20,14 +20,16 @@
   <div class="nav-container">
     <div class="list-items">
       <div class="logo">
-        <h1>Logo</h1>
+        <h1 style="color: darkred">Quick Cart</h1>
       </div>
       <div class="list">
         <ul>
           <li><a href="index.jsp">Home</a></li>
           <li><a href="allProduct.jsp">Product</a></li>
-          <li><a href="adminLogIn.jsp">Admin Area</a></li>
-          <li><a href="adminLogIn.jsp">Profile</a></li>
+          <li><a href="adminLogIn.jsp">Dashboard</a></li>
+          <li><a href="userProfile.jsp">Profile</a></li>
+          <li><a href="cart.jsp">Cart</a></li>
+          <li><a href="aboutUs.jsp">About Us</a></li>
           <li>
             <form action="logOut" method="post">
               <button class="btn btn-dark" type="submit" style="font-size: 25px; background-color: black; border: none">Logout</button>
@@ -43,14 +45,15 @@
   <div class="nav-container">
     <div class="list-items">
       <div class="logo">
-        <h2>Logo</h2>
+        <h2 style="color: darkred">Quick Cart</h2>
       </div>
       <div class="list">
         <ul>
           <li><a href="index.jsp">Home</a></li>
           <li><a href="allProduct.jsp">Product</a></li>
-          <li><a href="adminDashboard.jsp">Admin Area</a></li>
-          <li><a href="adminDashboard.jsp">Profile</a></li>
+          <li><a href="adminDashboard.jsp">Dashboard</a></li>
+          <li><a href="userProfile.jsp">Profile</a></li>
+          <li><a href="aboutUs.jsp">About Us</a></li>
           <li><a href="signin.jsp">SignIn</a></li>
         </ul>
       </div>

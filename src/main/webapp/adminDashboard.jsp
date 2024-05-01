@@ -59,7 +59,7 @@
                      alt="Oder Management photo">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>Oder Management</h1>
+                    <h1>Order Management</h1>
                     <p>Keep track of all orders in one place. View, update, and process orders effortlessly, ensuring
                         smooth operations and customer satisfaction.</p>
                     <button>click here</button>
@@ -72,7 +72,7 @@
                      alt="Inventory Management photo">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>ALl Products</h1>
+                    <h1>All Products</h1>
                     <p>Effortlessly manage users with our user management feature. Add, edit, or remove user accounts as
                         needed, ensuring secure access and smooth operations.</p>
                     <button><a href="adminProducts.jsp">Click Here</a></button>
@@ -143,7 +143,7 @@
                 <h1>Security and Authentication</h1>
                 <p>Protect your data and users with robust security measures. Ensure safe access to your platform
                     through authentication protocols, keeping sensitive information secure.</p>
-                <button>click here</button>
+                <button><a href="adminUsers.jsp">Click Here</a></button>
             </div>
 
         </div>
