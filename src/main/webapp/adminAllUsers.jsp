@@ -28,6 +28,8 @@
 </head>
 <body>
 
+<jsp:include page="navbar.jsp"/>
+
 
 <%
     if (session != null && session.getAttribute("adminEmail") != null) {

@@ -43,9 +43,9 @@
 <nav role='navigation'>
     <ul class="main">
         <li class="dashboard"><a href="adminDashboard.jsp">Dashboard</a></li>
-        <li class="edit"><a href="#">Edit Website</a></li>
+        <li class="edit"><a href="index.jsp">Home</a></li>
         <li class="write"><a href="productform.jsp">Add Product</a></li>
-        <li class="comments"><a href="#">All Admins</a></li>
+        <li class="comments"><a href="adminUsers.jsp">All Admins</a></li>
         <li class="users"><a href="adminAllUsers.jsp">Manage Users</a></li>
     </ul>
 </nav>
@@ -100,7 +100,7 @@
                     <h1>Settings and Configuration</h1>
                     <p>Customize your dashboard to fit your needs. Adjust display and notification settings for a
                         personalized experience and smoother workflow</p>
-                    <button>click here</button>
+                    <button><a href="adminUsers.jsp">Click Here</a></button>
                 </div>
 
             </div>

@@ -15,6 +15,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 
 <%
     int productId = Integer.parseInt(request.getParameter("productId"));
@@ -69,11 +70,11 @@
                         </form>
                     </div>
                     <div class="price">
-                        <h2 style="color: darkred"><%=product.getpPrice()%>Rs</h2>
+                        <h2 style="color: darkred"><%=product.getpPrice()%>.00 Rs</h2>
                         <p>No discount available</p>
                     </div>
                     <div class="category">
-                        <h4>Category</h4>
+                        <h4><%=product.getCategory()%></h4>
                     </div>
                     <div class="shipping">
                         <p>Free Shipping Hurry Up!</p>

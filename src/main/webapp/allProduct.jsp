@@ -10,22 +10,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="container-1">
-
-    <div class="nav-bar">
-        <div class="logo"></div>
-        <div class="sc-box">
-            <img class="search-icon"
-                 src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png" alt="Search Icon">
-            <input type="text" name="search" placeholder="Search here">
-            <input type="button" name="button" value="search">
-        </div>
-    </div>
-</div>
-<div class="title">
-    <h3>Categories</h3>
-</div>
-
+<jsp:include page="navbar.jsp"/>
 
 
 
@@ -175,7 +160,7 @@
         All Items
     </h3>
 </div>
-<div class="outer-card">
+<div class="outer-card" style="margin-bottom: 20px">
     <div class="inner-card">
 
 

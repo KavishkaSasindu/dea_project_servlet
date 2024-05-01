@@ -10,6 +10,7 @@ public class Product{
     private String img2;
     private String img3;
     private int quantity;
+    private String category;
     private User user;
 
     public Product(){
@@ -94,5 +95,13 @@ public class Product{
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

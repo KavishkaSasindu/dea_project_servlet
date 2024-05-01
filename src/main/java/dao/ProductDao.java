@@ -2,6 +2,7 @@ package dao;
 
 import db.DbConnection;
 import models.Product;
+import models.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,7 +22,7 @@ public class ProductDao{
     public boolean addProduct(Product product){
         int insertRow = 0;
         try{
-            final String INSERT_QUERY = "INSERT INTO product(pname,pprice,description,image1,image2,image3,image4,quantity) VALUES(?,?,?,?,?,?,?,?)";
+            final String INSERT_QUERY = "INSERT INTO product(pname,pprice,description,image1,image2,image3,image4,quantity,category) VALUES(?,?,?,?,?,?,?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(INSERT_QUERY);
             stmt.setString(1, product.getpName());
             stmt.setString(2, product.getpPrice());
@@ -31,6 +32,7 @@ public class ProductDao{
             stmt.setString(6,product.getImg2());
             stmt.setString(7,product.getImg3());
             stmt.setInt(8,product.getQuantity());
+            stmt.setString(9,product.getCategory());
 
             insertRow = stmt.executeUpdate();
 
@@ -140,6 +142,7 @@ public class ProductDao{
                 String image3 = rs.getString("image3");
                 String image4 = rs.getString("image4");
                 int quantity = rs.getInt("quantity");
+                String category  = rs.getString("category");
 
                 product.setId(id);
                 product.setpName(pName);
@@ -150,9 +153,49 @@ public class ProductDao{
                 product.setImg2(image3);
                 product.setImg3(image4);
                 product.setQuantity(quantity);
+                product.setCategory(category);
 
             }
 
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return product;
+    }
+
+    public List<Product> getAllUsers(){
+        List<Product> product = new ArrayList<>();
+        try{
+            final String ALL_QUERY = "SELECT * FROM product";
+            PreparedStatement stmt = conn.prepareStatement(ALL_QUERY);
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt("id");
+                int quantity = rs.getInt("quantity");
+                String productName = rs.getString("pname");
+                String description = rs.getString("pprice");
+                String image1 = rs.getString("image1");
+                String image2 = rs.getString("image2");
+                String image3 = rs.getString("image3");
+                String image4 = rs.getString("image4");
+                String category = rs.getString("category");
+
+                Product product1List = new Product();
+
+                product1List.setId(id);
+                product1List.setpName(productName);
+                product1List.setpDescription(description);
+                product1List.setQuantity(quantity);
+                product1List.setMainImage(image1);
+                product1List.setImg1(image2);
+                product1List.setImg2(image3);
+                product1List.setImg3(image4);
+                product1List.setCategory(category);
+
+                product.add(product1List);
+            }
         }catch(Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());

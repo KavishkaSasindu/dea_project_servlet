@@ -28,6 +28,7 @@ public class ProductServlet extends HttpServlet {
             String productImage2 = request.getParameter("productImage2");
             String productImage3 = request.getParameter("productImage3");
             int productQuantity = Integer.parseInt(request.getParameter("productQuantity"));
+            String category = request.getParameter("productCategory");
 
             product.setpName(productName);
             product.setpPrice(productPrice);
@@ -37,11 +38,14 @@ public class ProductServlet extends HttpServlet {
             product.setImg1(productImage1);
             product.setImg2(productImage2);
             product.setImg3(productImage3);
+            product.setCategory(category);
+
 
             ProductDao productDao = new ProductDao();
             boolean addSuccess =productDao.addProduct(product);
             if(addSuccess){
                 System.out.println("Product added successfully");
+                response.sendRedirect("allProduct.jsp");
             }else {
                 System.out.println("Product not added successfully");
             }
