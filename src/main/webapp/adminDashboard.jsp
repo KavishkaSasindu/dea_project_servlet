@@ -72,10 +72,10 @@
                      alt="Inventory Management photo">
                 <div class="layer"></div>
                 <div class="info">
-                    <h1>Inventory Management</h1>
+                    <h1>ALl Products</h1>
                     <p>Effortlessly manage users with our user management feature. Add, edit, or remove user accounts as
                         needed, ensuring secure access and smooth operations.</p>
-                    <button>click here</button>
+                    <button><a href="adminProducts.jsp">Click Here</a></button>
                 </div>
 
 

@@ -203,4 +203,45 @@ public class ProductDao{
 
         return product;
     }
+
+    public boolean updateProduct(Product product){
+        int insertRow =0;
+        try{
+            final String UPDATE_QUERY ="UPDATE product SET pname=? , pprice=?,description=?,image1=?,image2=?,image3=?,image4=?,quantity=?,category=? WHERE id=?" ;
+            PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);
+            stmt.setString(1,product.getpName());
+            stmt.setString(2,product.getpPrice());
+            stmt.setString(3, product.getpDescription());
+            stmt.setString(4, product.getMainImage());
+            stmt.setString(5, product.getImg1());
+            stmt.setString(6, product.getImg2());
+            stmt.setString(7, product.getImg3());
+            stmt.setInt(8,product.getQuantity());
+            stmt.setString(9, product.getCategory());
+            stmt.setInt(10,product.getId());
+
+
+            insertRow = stmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return insertRow>0;
+    }
+
+    public boolean deleteContact(int userId){
+        int rowsDeleted = 0;
+        try{
+            final String DELETE_QUERY = "DELETE FROM product WHERE id=?";
+            PreparedStatement stmt = conn.prepareStatement(DELETE_QUERY);
+            stmt.setInt(1,userId);
+            rowsDeleted = stmt.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return rowsDeleted>0;
+    }
+
 }

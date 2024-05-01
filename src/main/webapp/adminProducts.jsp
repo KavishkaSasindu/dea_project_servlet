@@ -57,11 +57,11 @@
                     <p class="card-text">Category: <%=product.getCategory()%></p>
                     <p class="card-text">Quantity: <%=product.getQuantity()%></p>
                     <div class="d-flex justify-content-between">
-                        <form action="" method="post">
+                        <form action="updateProductForm.jsp" method="post">
                             <input type="hidden" name="id" value="<%=product.getId()%>">
                             <button type="submit" class="btn btn-dark">Update</button>
                         </form>
-                        <form action="" method="post">
+                        <form action="deleteProduct" method="post">
                             <input type="hidden" name="id" value="<%=product.getId()%>">
                             <button type="submit" class="btn btn-dark">Delete</button>
                         </form>
