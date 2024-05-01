@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.outer-view {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-view {
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.preview-card {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-contain{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-contain{
+    width: 60%;
+    height: 100%;
+    margin-left: 20px;
+
+}
+
+.image-area{
+    width: 90%;
+    height:90% ;
+}
+
+.main-image{
+    width: 100%;
+    height: 75%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+.my-main-image{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.image-4{
+    margin-top: 20px;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr ;
+    grid-row: 1;
+    grid-gap: 10px;
+
+}
+
+.img-1{
+    height: 100%;
+
+
+}
+
+.sub-img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.detail-contain{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details{
+    width: 100%;
+    height: 100%;
+
+}
+.description{
+    margin-top: 10px;
+}
+
+.price{
+    margin-top: 20px;
+}
+.category{
+    margin-top: 15px;
+}
+
+.shipping{
+    margin-top: 10px;
+}
