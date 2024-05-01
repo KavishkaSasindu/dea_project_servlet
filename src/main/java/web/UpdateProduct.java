@@ -1,23 +1,21 @@
 package web;
-
 import dao.ProductDao;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
+import dao.UserDao;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpSession;
 import models.Product;
+import models.User;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.SQLException;
 
-
-@WebServlet("/addProduct")
-public class ProductServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+@WebServlet("/updateProduct")
+public class UpdateProduct extends HttpServlet{
+    public void doPost(HttpServletRequest request,HttpServletResponse response){
         try{
+            int id = Integer.parseInt(request.getParameter("id"));
             Product product =new Product();
 
             String productName = request.getParameter("productName");
@@ -30,6 +28,8 @@ public class ProductServlet extends HttpServlet {
             int productQuantity = Integer.parseInt(request.getParameter("productQuantity"));
             String category = request.getParameter("productCategory");
 
+
+product.setId(id);
             product.setpName(productName);
             product.setpPrice(productPrice);
             product.setpDescription(productDescription);
@@ -40,19 +40,18 @@ public class ProductServlet extends HttpServlet {
             product.setImg3(productImage3);
             product.setCategory(category);
 
-
             ProductDao productDao = new ProductDao();
-            boolean addSuccess =productDao.addProduct(product);
-            if(addSuccess){
-                System.out.println("Product added successfully");
-                response.sendRedirect("allProduct.jsp");
-            }else {
-                System.out.println("Product not added successfully");
+            boolean isSuccess = productDao.updateProduct(product);
+
+            if(isSuccess){
+                response.sendRedirect("adminDashboard.jsp");
+                System.out.println("update user success");
+            }else{
+                System.out.println("user not update");
             }
-        }catch (Exception e){
+        }catch(Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-
     }
 }

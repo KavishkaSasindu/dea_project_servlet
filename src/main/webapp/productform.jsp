@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<jsp:include page="navbar.jsp"/>
+
 <%
 
     if(session!=null && session.getAttribute("email")!=null){
@@ -59,6 +61,10 @@
         <div class="form-group">
             <label for="productImage3">Product Image Three</label>
             <input type="text" id="productImage3" name="productImage3" placeholder="https://www.google.com/search?q=image" min="0" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="productImage3">Product Category</label>
+            <input type="text" id="productCategory" name="productCategory" placeholder="Electronic" min="0" step="0.01" required>
         </div>
         <div class="form-group">
             <button type="submit">Add Product</button>

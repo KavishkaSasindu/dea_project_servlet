@@ -21,7 +21,7 @@ public class AdminSignIn extends HttpServlet{
             if(isAuthenticated){
                 HttpSession session = request.getSession();
                 session.setAttribute("adminEmail",email);
-                response.sendRedirect("adminAllUsers.jsp");
+                response.sendRedirect("adminDashboard.jsp");
             }else{
                 response.sendRedirect("adminLogIn.jsp");
             }
