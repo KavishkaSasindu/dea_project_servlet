@@ -36,8 +36,29 @@ public class CartServlet extends HttpServlet{
 
          if(cart_list == null){
              cartList.add(cartItem);
-             session.setAttribute("cart_list",cartList);
-             out.println("session created and added to cart list");
+             session.setAttribute("cart-list",cartList);
+             System.out.println("session created and added to cart list");
+             out.println("<script>alert('Item is added to cart');</script>");
+             response.sendRedirect("allProduct.jsp");
+         }else{
+             cartList = cart_list;
+
+             boolean exist = false;
+             for(CartItem cart:cart_list){
+                 if(cart.getId() == productId){
+                     exist = true;
+
+                     out.println("<script>alert('Item already exists in the cart');</script>");
+                 }
+
+                 if(!exist){
+                     cart_list.add(cartItem);
+                     session.setAttribute("cart-list",cart_list);
+                     out.println("<script>alert('Item is added to cart');</script>");
+
+
+                 }
+             }
          }
 
 

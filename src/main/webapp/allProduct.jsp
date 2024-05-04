@@ -183,7 +183,7 @@
                 e.printStackTrace();
                 System.out.println(e.getMessage());
             }
-            for(Product product:productList2){
+            for(Product product:productList3){
 
         %>
 
