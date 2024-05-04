@@ -3,7 +3,7 @@ package models;
 public class Product{
     private int id;
     private String pName;
-    private String pPrice;
+    private double pPrice;
     private String pDescription;
     private String mainImage;
     private String img1;
@@ -33,11 +33,11 @@ public class Product{
         this.pName = pName;
     }
 
-    public String getpPrice() {
+    public double getpPrice() {
         return pPrice;
     }
 
-    public void setpPrice(String pPrice) {
+    public void setpPrice(double pPrice) {
         this.pPrice = pPrice;
     }
 

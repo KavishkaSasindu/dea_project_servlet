@@ -22,7 +22,7 @@ public class CartDAO {
             PreparedStatement stmt = conn.prepareStatement(INSERT);
             stmt.setInt(1,productId);
             stmt.setString(2,cartItem.getpName());
-            stmt.setString(3, cartItem.getpPrice());
+            stmt.setDouble(3, cartItem.getpPrice());
             stmt.setString(4,cartItem.getpDescription());
             stmt.setString(5,cartItem.getMainImage());
             stmt.setString(6,cartItem.getImg1());
