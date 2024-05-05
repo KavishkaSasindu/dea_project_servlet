@@ -101,6 +101,7 @@ public class ProductDao{
                 String image_3 = rs.getString("image3");
                 String image_4 = rs.getString("image4");
                 int quantity = rs.getInt("quantity");
+                String category = rs.getString("category");
 
                 Product product1 = new Product();
 
@@ -113,6 +114,7 @@ public class ProductDao{
                 product1.setpDescription(description);
                 product1.setpPrice(pPrice);
                 product1.setQuantity(quantity);
+                product1.setCategory(category);
 
                 product.add(product1);
 

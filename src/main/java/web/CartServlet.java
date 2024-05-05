@@ -47,13 +47,14 @@ public class CartServlet extends HttpServlet{
              for(CartItem cart:cart_list){
                  if(cart.getId() == productId){
                      exist = true;
-
+                        response.sendRedirect("cart.jsp");
                      out.println("<script>alert('Item already exists in the cart');</script>");
                  }
 
                  if(!exist){
                      cart_list.add(cartItem);
                      session.setAttribute("cart-list",cart_list);
+                     response.sendRedirect("allProduct.jsp");
                      out.println("<script>alert('Item is added to cart');</script>");
 
 

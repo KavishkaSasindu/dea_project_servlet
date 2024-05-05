@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="models.Product" %>
 <%@ page import="dao.ProductDao" %>
+<%@ page import="models.CartItem" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,9 +16,7 @@
 
 
 
-
-
-<div class="categories">
+<div class="categories" style="margin-top: 10px">
     <div class="category">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-wc5b5oDdjeYXFQTWaImeQnsdAW2mwfXDMdIqXBaIUJmurwsB_MW0KXlLCjUjJUSf8iw&usqp=CAU"
              alt="Category 1">
@@ -58,7 +58,6 @@
 <div class="outer-card">
     <div class="inner-card">
 
-
         <%
 
             List<Product> productList = List.of();
@@ -72,6 +71,7 @@
             for(Product product:productList){
 
         %>
+
 
         <div class="card-body">
             <div class="card-img">

@@ -63,10 +63,13 @@ if(cart_list!=null){
                         <td>
                             <div class="main">
                                 <div class="d-flex">
-                                    <img src="<%=cart.getMainImage()%>" alt="">
+                                    <img src="<%=cart.getMainImage()%>" alt="" style="width: 150px;height: 150px;object-fit: cover">
                                 </div>
                                 <div class="des">
                                     <p><%=cart.getpName()%></p>
+                                </div>
+                                <div style="margin-top: 5px">
+                                    <p><%=cart.getpDescription()%></p>
                                 </div>
                             </div>
                         </td>

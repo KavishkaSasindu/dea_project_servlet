@@ -1,4 +1,7 @@
-<%--
+<%@ page import="models.CartItem" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="dao.ProductDao" %><%--
   Created by IntelliJ IDEA.
   User: sasin
   Date: 4/28/2024
@@ -12,6 +15,24 @@
   <link rel="stylesheet" href="./css/navbar.css">
 </head>
 <body>
+
+
+
+<%
+  if(session!=null && session.getAttribute("email")!=null){
+    System.out.println("user logged in");
+  }else{
+    response.sendRedirect("signin.jsp");
+  }
+
+  ArrayList<CartItem> cart_list = (ArrayList<CartItem>) session.getAttribute("cart-list");
+  List<CartItem> cartProduct = null;
+  ProductDao productDao1 = new ProductDao();
+  if(cart_list!=null){
+    cartProduct =  productDao1.getCartProducts(cart_list);
+    request.setAttribute("cart_list",cart_list);
+  }
+%>
 
 <%
   boolean isLoggedIn = false;
@@ -28,7 +49,7 @@
           <li><a href="allProduct.jsp">Product</a></li>
           <li><a href="adminLogIn.jsp">Dashboard</a></li>
           <li><a href="userProfile.jsp">Profile</a></li>
-          <li><a href="cart.jsp">Cart</a></li>
+          <li><a href="cart.jsp">Cart <span class="badge badge-danger" style="background-color: red;color: white;">${cart_list.size()}</span> </a></li>
           <li><a href="aboutUs.jsp">About Us</a></li>
           <li>
             <form action="logOut" method="post">
