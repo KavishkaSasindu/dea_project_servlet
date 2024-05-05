@@ -32,8 +32,10 @@ if(session!=null && session.getAttribute("email")!=null){
     ArrayList<CartItem> cart_list = (ArrayList<CartItem>) session.getAttribute("cart-list");
 List<CartItem> cartProduct = null;
 ProductDao productDao = new ProductDao();
+
 if(cart_list!=null){
     cartProduct =  productDao.getCartProducts(cart_list);
+
     request.setAttribute("cart_list",cart_list);
 }
 %>
@@ -48,7 +50,7 @@ if(cart_list!=null){
                         <th scope="col"class="text-white">Product</th>
                         <th scope="col"class="text-white">Price</th>
                         <th scope="col"class="text-white">Quantity</th>
-                        <th scope="col"class="text-white">Total</th>
+                        <th scope="col" class="tex-white">Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -85,7 +87,9 @@ if(cart_list!=null){
                             </div>
                         </td>
                         <td>
-                            <h6><%=cart.getpPrice()*cart.getQuantity()%></h6>
+                            <form action="">
+                                <button type="submit" class="btn btn-danger">Remove</button>
+                            </form>
                         </td>
                     </tr>
                             <%}
@@ -101,20 +105,35 @@ if(cart_list!=null){
             </div>
         </div>
     </div>
+
+
+
 </section>
+
+
+
+<%
+
+    ArrayList<CartItem> cart_list1 = (ArrayList<CartItem>) session.getAttribute("cart-list");
+    List<CartItem> cartProduct1 = null;
+    ProductDao productDao1 = new ProductDao();
+
+    if(cart_list!=null) {
+        double total = productDao.getTotalCart(cart_list);%>
+
+
+
 <div class="col-lg-4 offset-lg-4">
     <div class="checkout">
         <ul>
-            <li class="subtotal">subtotal
-                <span>$60.00</span>
+            <li class="subtotal">Total
+                <span>RS<%=total%></span>
             </li>
-            <li class="cart-total">Total
-                <span>$60.00</span></li>
+
         </ul>
         <a href=" https://www.paypal.com/signin" class="proceed-btn">Proceed to Checkout</a>
     </div>
 </div>
-
-
+<%}%>
 </body>
 </html>

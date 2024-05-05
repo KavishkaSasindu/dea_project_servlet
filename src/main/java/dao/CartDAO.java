@@ -6,6 +6,7 @@ import models.CartItem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class CartDAO {
 
@@ -60,4 +61,7 @@ public class CartDAO {
         }
         return cartItem;
     }
+
+
+
 }

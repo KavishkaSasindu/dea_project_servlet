@@ -287,4 +287,30 @@ public class ProductDao{
     return product;
     }
 
+
+    public double getTotalCart(ArrayList<CartItem> cart_list){
+        double sum = 0;
+        try{
+
+            if(cart_list.size()>0){
+                for(CartItem cart:cart_list){
+                    final String QUERY = "SELECT pprice FROM product WHERE id = ?";
+                    PreparedStatement stmt = conn.prepareStatement(QUERY);
+                    stmt.setInt(1,cart.getId());
+                    ResultSet rs =  stmt.executeQuery();
+
+                    while(rs.next()){
+                        sum+=rs.getDouble("pprice")*cart.getQuantity();
+                    }
+                }
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return sum;
+
+    }
+
 }

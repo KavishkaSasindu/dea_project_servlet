@@ -41,7 +41,7 @@
   <div class="nav-container">
     <div class="list-items">
       <div class="logo">
-        <h1 style="color: darkred">Quick Cart</h1>
+        <h1 style="color: white">Quick Cart</h1>
       </div>
       <div class="list">
         <ul>
