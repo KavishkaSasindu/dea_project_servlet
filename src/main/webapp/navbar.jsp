@@ -44,7 +44,7 @@
         <h1 style="color: white">Quick Cart</h1>
       </div>
       <div class="list">
-        <ul>
+        <ul >
           <li><a href="index.jsp">Home</a></li>
           <li><a href="allProduct.jsp">Product</a></li>
           <li><a href="adminLogIn.jsp">Dashboard</a></li>

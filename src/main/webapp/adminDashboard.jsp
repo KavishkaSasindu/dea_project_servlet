@@ -31,7 +31,6 @@
     <h1>Logo</h1>
     <ul class="utilities">
         <br>
-        <li class="users"><a href="#">My Account</a></li>
         <li class="logout warn">
             <form action="adminLogout" method="post">
                 <button type="submit" class="btn btn-dark">Logout</button>

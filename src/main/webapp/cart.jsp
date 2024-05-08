@@ -87,7 +87,8 @@ if(cart_list!=null){
                             </div>
                         </td>
                         <td>
-                            <form action="">
+                            <form action="remove" method="post">
+                                <input type="hidden" value="<%=cart.getId()%>" name="id">
                                 <button type="submit" class="btn btn-danger">Remove</button>
                             </form>
                         </td>

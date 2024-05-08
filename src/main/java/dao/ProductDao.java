@@ -300,7 +300,7 @@ public class ProductDao{
                     ResultSet rs =  stmt.executeQuery();
 
                     while(rs.next()){
-                        sum+=rs.getDouble("pprice")*cart.getQuantity();
+                        sum+=rs.getDouble("pprice");
                     }
                 }
             }
