@@ -19,7 +19,7 @@ public class UpdateProduct extends HttpServlet{
             Product product =new Product();
 
             String productName = request.getParameter("productName");
-            String productPrice = request.getParameter("productPrice");
+            double productPrice = Double.parseDouble(request.getParameter("productPrice"));
             String productDescription = request.getParameter("productDescription");
             String productMainImage = request.getParameter("productMainImage");
             String productImage1 = request.getParameter("productImage1");

@@ -81,13 +81,13 @@
                     </div>
 
                     <div class="buttons" style="display: flex">
-                        <form action="">
+                        <form action="cartAdd" method="post">
                             <input type="hidden" name="productId" value="<%=product.getId()%>">
                             <button class="btn btn-dark">Add to cart</button>
                         </form>
                         <form action="" style="margin-left: 10px">
                             <input type="hidden" name="productId" value="<%=product.getId()%>">
-                            <button class="btn btn-dark">Buy Now</button>
+                            <button class="btn btn-dark"><a href="https://www.paypal.com/signin" style="text-decoration: none; color: white">Buy Now</a></button>
                         </form>
                     </div>
                 </div>

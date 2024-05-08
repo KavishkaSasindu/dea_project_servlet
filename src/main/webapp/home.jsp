@@ -185,7 +185,7 @@
 <div class="section-2"></div>
 
 <div class="footer">
-    Footer goes here..
+   <jsp:include page="footer.jsp"/>
 </div>
 
 <script>

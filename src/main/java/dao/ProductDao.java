@@ -1,6 +1,7 @@
 package dao;
 
 import db.DbConnection;
+import models.CartItem;
 import models.Product;
 import models.User;
 
@@ -25,7 +26,7 @@ public class ProductDao{
             final String INSERT_QUERY = "INSERT INTO product(pname,pprice,description,image1,image2,image3,image4,quantity,category) VALUES(?,?,?,?,?,?,?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(INSERT_QUERY);
             stmt.setString(1, product.getpName());
-            stmt.setString(2, product.getpPrice());
+            stmt.setDouble(2, product.getpPrice());
             stmt.setString(3, product.getpDescription());
             stmt.setString(4, product.getMainImage());
             stmt.setString(5,product.getImg1());
@@ -53,7 +54,7 @@ public class ProductDao{
             while (rs.next()){
                 int id = rs.getInt("id");
                 String pName = rs.getString("pname");
-                String pPrice = rs.getString("pprice");
+                double pPrice = rs.getDouble("pprice");
                 String description = rs.getString("description");
                 String image1 = rs.getString("image1");
                 String image_2 = rs.getString("image2");
@@ -93,13 +94,14 @@ public class ProductDao{
             while (rs.next()){
                 int id = rs.getInt("id");
                 String pName = rs.getString("pname");
-                String pPrice = rs.getString("pprice");
+                double pPrice = rs.getDouble("pprice");
                 String description = rs.getString("description");
                 String image1 = rs.getString("image1");
                 String image_2 = rs.getString("image2");
                 String image_3 = rs.getString("image3");
                 String image_4 = rs.getString("image4");
                 int quantity = rs.getInt("quantity");
+                String category = rs.getString("category");
 
                 Product product1 = new Product();
 
@@ -112,6 +114,7 @@ public class ProductDao{
                 product1.setpDescription(description);
                 product1.setpPrice(pPrice);
                 product1.setQuantity(quantity);
+                product1.setCategory(category);
 
                 product.add(product1);
 
@@ -135,7 +138,7 @@ public class ProductDao{
                 product = new Product();
                 int pId = rs.getInt("id");
                 String pName = rs.getString("pname");
-                String pPrice = rs.getString("pprice");
+                double pPrice = rs.getDouble("pprice");
                 String description = rs.getString("description");
                 String image1 = rs.getString("image1");
                 String image2 = rs.getString("image2");
@@ -175,7 +178,8 @@ public class ProductDao{
                 int id = rs.getInt("id");
                 int quantity = rs.getInt("quantity");
                 String productName = rs.getString("pname");
-                String description = rs.getString("pprice");
+                double price = rs.getDouble("pprice");
+                String description = rs.getString("description");
                 String image1 = rs.getString("image1");
                 String image2 = rs.getString("image2");
                 String image3 = rs.getString("image3");
@@ -188,6 +192,7 @@ public class ProductDao{
                 product1List.setpName(productName);
                 product1List.setpDescription(description);
                 product1List.setQuantity(quantity);
+                product1List.setpPrice(price);
                 product1List.setMainImage(image1);
                 product1List.setImg1(image2);
                 product1List.setImg2(image3);
@@ -210,7 +215,7 @@ public class ProductDao{
             final String UPDATE_QUERY ="UPDATE product SET pname=? , pprice=?,description=?,image1=?,image2=?,image3=?,image4=?,quantity=?,category=? WHERE id=?" ;
             PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);
             stmt.setString(1,product.getpName());
-            stmt.setString(2,product.getpPrice());
+            stmt.setDouble(2,product.getpPrice());
             stmt.setString(3, product.getpDescription());
             stmt.setString(4, product.getMainImage());
             stmt.setString(5, product.getImg1());
@@ -242,6 +247,70 @@ public class ProductDao{
             System.out.println(e.getMessage());
         }
         return rowsDeleted>0;
+    }
+
+
+    public List<CartItem> getCartProducts(ArrayList<CartItem> cart_list) {
+
+        List<CartItem> product = new ArrayList<>();
+
+        try {
+            if (cart_list.size() > 0) {
+                for (CartItem cart : cart_list) {
+                    final String QUERY = "SELECT * FROM product WHERE id =?";
+                    PreparedStatement stmt = conn.prepareStatement(QUERY);
+                    stmt.setInt(1, cart.getId());
+                    ResultSet rs = stmt.executeQuery();
+                    while (rs.next()) {
+                        CartItem cartItem = new CartItem();
+                        cartItem.setId(rs.getInt("id"));
+                        cartItem.setpName(rs.getString("pname"));
+                        cartItem.setpPrice(rs.getDouble("pprice"));
+                        cartItem.setpDescription(rs.getString("description"));
+                        cartItem.setMainImage(rs.getString("image1"));
+                        cartItem.setImg1(rs.getString("image2"));
+                        cartItem.setImg2(rs.getString("image3"));
+                        cartItem.setImg3(rs.getString("image4"));
+                        cartItem.setQuantity(rs.getInt("quantity"));
+                        cartItem.setCategory(rs.getString("category"));
+                        product.add(cartItem);
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+    return product;
+    }
+
+
+    public double getTotalCart(ArrayList<CartItem> cart_list){
+        double sum = 0;
+        try{
+
+            if(cart_list.size()>0){
+                for(CartItem cart:cart_list){
+                    final String QUERY = "SELECT pprice FROM product WHERE id = ?";
+                    PreparedStatement stmt = conn.prepareStatement(QUERY);
+                    stmt.setInt(1,cart.getId());
+                    ResultSet rs =  stmt.executeQuery();
+
+                    while(rs.next()){
+                        sum+=rs.getDouble("pprice");
+                    }
+                }
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return sum;
+
     }
 
 }

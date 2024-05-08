@@ -13,13 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/aboutUs.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-<section class="heor">
+<jsp:include page="navbar.jsp"/>
+<section class="heor" >
     <div class="heading">
 
     </div>
-    <div class="container">
+    <div class="container" data-aos="fade-in">
         <div class="hero-content">
             <h2>Welcome To Our website</h2>
             <p>Welcome to [Your E-commerce Website Name]! We're here to make shopping easy and enjoyable for you.
@@ -137,5 +140,11 @@
         </div>
     </div>
 </section>
+
+<jsp:include page="footer.jsp"/>
+
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
